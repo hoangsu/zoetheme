@@ -55,6 +55,18 @@
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/montserrat-black-webfont.eot');
+    src: url('fonts/montserrat-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/montserrat-black-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-black-webfont.woff') format('woff'),
+         url('fonts/montserrat-black-webfont.ttf') format('truetype'),
+         url('fonts/montserrat-black-webfont.svg#montserratblack') format('svg');
+    font-weight: 800;
+    font-style: normal;
+
+}
 $Arial:     Arial, sans-serif;
 $Tex:   'texgyrepagella', Arial, sans-serif;
 $Mon:   'Montserrat', Arial, sans-serif;
