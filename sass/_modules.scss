@@ -1,0 +1,41 @@
+@mixin box-sizing-none() {box-sizing: content-box; -moz-box-sizing: content-box; -webkit-box-sizing: content-box;}
+@mixin border-radius($val) {border-radius: $val; -moz-border-radius: $val; -webkit-border-radius: $val;}
+@mixin box-shadow($val1,$val2,$val3,$shadown,$color) {
+    -moz-box-shadow: $val1 $val2 $val3 $shadown $color;
+    -webkit-box-shadow: $val1 $val2 $val3 $shadown $color;
+    box-shadow: $val1 $val2 $val3 $shadown $color;
+}
+@mixin placeholder() {
+  // Firefox
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder { @content; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { @content; } // Safari and Chrome
+}
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+a {color: inherit;}
+a:hover {text-decoration: none;}
+*{margin:0; padding:0;}
+img {border:none; max-width: 100%; outline: none;}
+li {list-style-type: none;}
+body {font:normal 16px/20px $Tex; font-weight: normal; font-style: normal; color:$text-color;
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+}
+h1,h2,h3,h4 {font-family: $Mon; text-transform: uppercase;font-weight: bold;
+  a:hover {color: inherit;}
+}
+
+/* modules */
+.helper { display: inline-block;height: 100%;vertical-align: middle;}
