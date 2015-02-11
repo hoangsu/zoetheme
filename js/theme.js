@@ -12,4 +12,8 @@ $(document).ready(function() {
 	    $('.home-banner .flexslider').flexslider('next')
 	    return false;
 	})
+	/*responsive*/
+	$("#site-navigation-toggle").click(function() {
+		/* Act on the event */
+	});
 })

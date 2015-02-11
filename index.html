@@ -11,6 +11,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" type="text/css" href="css/flexslider.css" />
+    <link rel="stylesheet" type="text/css" href="css/mobile-menu.css" />
     <link href="style.css" type="text/css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -21,9 +22,10 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="site-nav visible-xs">
+    <nav class="site-nav visible-xs" >
+      <div class="site-nav--scrollable-container">
         <i class="fa fa-times close-nav"></i>
-        <aside  class="widget_nav_menu">
+        <aside  class="widget_nav_menu site-nav__section">
           <h4 class="widgettitle">Navigation</h4>
             <ul class="menu">
               <li><a href="#">Worldview</a></li>
@@ -32,14 +34,33 @@
               <li><a href="#">God</a></li>
             </ul>
         </aside>
+        <aside class="widget_search site-nav__section">
+          <h4 class="widgettitle">Search</h4>
+            <div class="search-icon"><a href="#" title=""><i class="fa fa-search"></i></a></div>
+        </aside>
+        <aside class="widget_language site-nav__section">
+          <h4 class="widgettitle">Language</h4>
+          <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">ENG
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">USA</a></li>
+                <li><a href="#">FR</a></li>
+                <li><a href="#">Thai</a></li>
+                <li><a href="#">VI</a></li>
+              </ul>
+            </div>
+        </aside>
+      </div>
     </nav>
     <div class="site-nav-overlay"></div>
-    <div id="page">
+    <div id="page" class="hfeed site">
     <header id="header">
       <div class="container">
         <div class="logo"><a href="/" title="logo"><img src="images/logo.png" alt=""></a></div>
-          <a href="#" id="site-navigation-toggle" class="visible-xs"><i class="fa fa-navicon"></i></a>
-          <nav class="main-menu">
+          <a href="#" id="site-navigation-toggle" class="visible-xs site-navigation-toggle"><i class="fa fa-navicon"></i></a>
+          <nav class="main-menu visible-sm">
             <ul class="menu">
               <li><a href="#">Worldview</a></li>
               <li><a href="#">Life</a></li>
@@ -337,10 +358,10 @@
     </main><!-- /main -->
     <footer id="footer">
       <div class="container">
-        <div class="copyright">
+        <div class="copyright col-xs-12">
           <p>&copy;2014 GODWRX</p>
         </div>
-        <nav class="footer-menu">
+        <nav class="footer-menu col-xs-12">
           <ul class="menu">
             <li><a href="#" title="">About</a></li>
             <li><a href="#" title="">Contact</a></li>
@@ -363,6 +384,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/mobile-menu.js"></script>
     <script src="js/theme.js"></script>
   </body>
 </html>
